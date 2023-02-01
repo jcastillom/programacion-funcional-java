@@ -2,6 +2,6 @@ package com.java.functional.service;
 
 public interface LambdaCalculadoraLong {
 	
-	void ejecutarCalculadoraLongParams();
+	long ejecutarCalculadoraLongParams(long a, long b);
 
 }
