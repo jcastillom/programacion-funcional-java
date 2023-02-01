@@ -17,7 +17,11 @@ public class Principal extends Base {
 		ejecutarLambdaSimple();
 		ejecutarLambdaConParametros();
 		
-		LambdaCalculadoraInt calInt = (a, b) -> a + b;
+		calcular((int a, int b) -> a * b);					// indicar el tipo de dato directo en los parámetros
+		
+		calcular((LambdaCalculadoraInt)(a, b) -> a / b);	// Hacer Casteo del objeto al que pertenece la expresipon infiere el tipo de dato
+		
+		LambdaCalculadoraInt calInt = (a, b) -> a + b;		// Crear la expresión Lamda con la interface requerida e infiere el tipo de dato
 		calcular(calInt);
 		
 		LambdaCalculadoraLong calLong = ( a, b) -> a - b;
