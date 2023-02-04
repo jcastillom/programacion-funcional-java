@@ -1,4 +1,4 @@
-package com.java.functional;
+package com.java.functional.main;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
