@@ -24,7 +24,7 @@ public class MainBiFunction {
 		 * Tiene un método abstracto que recibe dos objetos apply(T t, U u)
 		 */
 		BiFunction<String, String, String> bi = (x, y) -> x + y;
-		logger.debug("Se concatenan valores con BiFunction: {}", bi.apply("Bi-", "Function"));
+		logger.debug("Se concatenan valores con BiFunction: {}", bi.apply("Bi-", "Function").length());
 
 
 		
@@ -44,11 +44,11 @@ public class MainBiFunction {
 				);
 		
 		//Devuelve una lista de cadenas con el aumento de sueldo
-		List<String> listaIncrementos = calc.calcularSueldos((Usuario, incremento) -> "" + Usuario.getSueldo() * Double.valueOf("1." + incremento.intValue()), listaUsuarios, 30.0);
+		List<String> listaIncrementos = calc.calcularSueldos((usuario, incremento) -> "" + usuario.getSueldo() * Double.valueOf("1." + incremento.intValue()), listaUsuarios, 30.0);
 		listaIncrementos.stream().forEach(incremento -> logger.debug("El sueldo con incremento es de: {}", incremento));
 		
 		//Devuelve una lista de usuarios con el aumento de sueldo
-		List<Usuario> user = calc.calcularSueldoUusario((Usuario, incremento) -> new Usuario(Usuario.getNombre(), Usuario.getEdad(), Usuario.getSueldo(), Usuario.getSueldo() * Double.valueOf("1." + incremento.intValue())), listaUsuarios, 30.0);
+		List<Usuario> user = calc.calcularSueldoUusario((usuario, incremento) -> new Usuario(usuario.getNombre(), usuario.getEdad(), usuario.getSueldo(), usuario.getSueldo() * Double.valueOf("1." + incremento.intValue())), listaUsuarios, 30.0);
 		user.stream().forEach(u -> logger.debug("El usuario \u001b[36m {} \u001B[0m de \u001b[36m {} \u001B[0m años de edad con un sueldo de \u001b[36m {} \u001B[0m tuvo un aumento que equivale a: \u001b[36m {} \u001B[0m", u.getNombre(), u.getEdad(), u.getSueldo(), u.getSueldoAumento()));
 		
 	}
