@@ -1,13 +1,14 @@
 package com.java.functional.main;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.java.functional.base.Base;
 import com.java.functional.beans.Usuario;
 
 public class MainFunction {
@@ -26,9 +27,9 @@ public class MainFunction {
 		logger.debug("{}", convertidor.apply(543274).length());
 		
 		//Ejemplo de Function con un bean
-		Usuario usuario = new Usuario("José", 34, 2750.3, 0);
+		Usuario usuario = new Usuario("José", LocalDate.of(1987, 3, 12), 2750.3, 0);
 		String nombre = (String ) obtenerDatosUsuario(usuario, Usuario::getNombre);
-		int edad = (int) obtenerDatosUsuario(usuario, Usuario::getEdad);
+		int edad = (int) obtenerDatosUsuario(usuario, Usuario::getFechaNacimiento);
 		float sueldo = (float) obtenerDatosUsuario(usuario, Usuario::getSueldo);
 		
 		logger.debug("El nombre del usuario es: {}", nombre);
@@ -36,12 +37,7 @@ public class MainFunction {
 		logger.debug("El sueldo del usuario es: {}", sueldo);
 		
 		//Ejemplo de Function con una lista
-		List<Usuario> listaUsuarios = Arrays.asList(
-					new Usuario("Chappie", 31, 3800.5, 0), 
-					new Usuario("Karen", 41, 2700.2, 0),
-					new Usuario("Marcial", 50, 6850.6, 0),
-					new Usuario("José", 34, 1287.8, 0)
-				);
+		List<Usuario> listaUsuarios = Base.listaUsuarios();
 		
 		List<Object> listaNombres = obtenerUsuarios(listaUsuarios, Usuario::getNombre);
 		logger.debug("--------------------------------------------------------------");
