@@ -28,18 +28,21 @@ public class Base {
 				new Usuario("Ricardo", LocalDate.of(1990, 1, 29), 14000, 0),
 				new Usuario("Beatriz", LocalDate.of(1990, 5, 7), 5000, 0),
 				new Usuario("Paola", LocalDate.of(1990, 9, 6), 9000, 0),
-				new Usuario("José", LocalDate.of(1986, 3, 12), 1000, 0)
+				new Usuario("Josï¿½", LocalDate.of(1986, 3, 12), 1000, 0)
 			);
 	}
 	
 	public static Map<String, String> obtenerMapa(){
-		String[][] arreglo = {{"MX", "México"}, {"JP", "JAPON"}, {"EN", "Estados Unidos"}, {"BR", "BRASIL"}, {"FR", "FRANCIA"}};
+		String[][] arreglo = {{"MX", "Mï¿½xico"}, {"JP", "JAPON"}, {"EN", "Estados Unidos"}, {"BR", "BRASIL"}, {"FR", "FRANCIA"}};
 		Map<String, String> map = new HashMap<>();
 		
 		Arrays.asList(arreglo).forEach(x -> map.put(x[0], x[1]));
 		
 		return map;
+	}
 	
+	public static List<Integer> obtenerEnteros(){
+		return Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 	}
 
 }
