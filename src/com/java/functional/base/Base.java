@@ -18,17 +18,17 @@ public class Base {
 	
 	public static List<Usuario> listaUsuarios(){
 		return Arrays.asList(
-				new Usuario("Chappie", LocalDate.of(1990, 12, 25), 3000, 0), 
-				new Usuario("Karen", LocalDate.of(1980, 05, 27), 2000, 0),
-				new Usuario("Marcial", LocalDate.of(1970, 06, 15), 8000, 0),
-				new Usuario("Emilio", LocalDate.of(1986, 4, 4), 3000, 0),
-				new Usuario("Lupita", LocalDate.of(1997, 2, 14), 6000, 0),
-				new Usuario("Ivon", LocalDate.of(1990, 11, 20), 7000, 0),
-				new Usuario("Monse", LocalDate.of(1990, 12, 9), 4000, 0),
-				new Usuario("Ricardo", LocalDate.of(1990, 1, 29), 14000, 0),
-				new Usuario("Beatriz", LocalDate.of(1990, 5, 7), 5000, 0),
-				new Usuario("Paola", LocalDate.of(1990, 9, 6), 9000, 0),
-				new Usuario("Josï¿½", LocalDate.of(1986, 3, 12), 1000, 0)
+				new Usuario(29, "Chappie", LocalDate.of(1990, 12, 25), 3000, 0), 
+				new Usuario(31, "Karen", LocalDate.of(1980, 05, 27), 2000, 0),
+				new Usuario(13, "Marcial", LocalDate.of(1970, 06, 15), 8000, 0),
+				new Usuario(33, "Emilio", LocalDate.of(1986, 4, 4), 3000, 0),
+				new Usuario(43, "Lupita", LocalDate.of(1997, 2, 14), 6000, 0),
+				new Usuario(67, "Ivon", LocalDate.of(1990, 11, 20), 7000, 0),
+				new Usuario(27, "Monse", LocalDate.of(1990, 12, 9), 4000, 0),
+				new Usuario(71, "Ricardo", LocalDate.of(1990, 1, 29), 14000, 0),
+				new Usuario(89, "Beatriz", LocalDate.of(1990, 5, 7), 5000, 0),
+				new Usuario(67, "Paola", LocalDate.of(1990, 9, 6), 9000, 0),
+				new Usuario(11, "José", LocalDate.of(1986, 3, 12), 1000, 0)
 			);
 	}
 	
@@ -42,7 +42,7 @@ public class Base {
 	}
 	
 	public static List<Integer> obtenerEnteros(){
-		return Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+		return Arrays.asList(3, 5, 7, 2, 4, 9, 8, 1, 6, 10);
 	}
 
 }

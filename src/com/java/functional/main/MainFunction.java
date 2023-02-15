@@ -27,7 +27,7 @@ public class MainFunction {
 		logger.debug("{}", convertidor.apply(543274).length());
 		
 		//Ejemplo de Function con un bean
-		Usuario usuario = new Usuario("José", LocalDate.of(1987, 3, 12), 2750.3, 0);
+		Usuario usuario = new Usuario(1, "José", LocalDate.of(1987, 3, 12), 2750.3, 0);
 		String nombre = (String ) obtenerDatosUsuario(usuario, Usuario::getNombre);
 		int edad = (int) obtenerDatosUsuario(usuario, Usuario::getFechaNacimiento);
 		float sueldo = (float) obtenerDatosUsuario(usuario, Usuario::getSueldo);

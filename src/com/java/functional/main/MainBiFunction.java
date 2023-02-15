@@ -43,7 +43,7 @@ public class MainBiFunction {
 		listaIncrementos.stream().forEach(incremento -> logger.debug("El sueldo con incremento es de: {}", incremento));
 		
 		//Devuelve una lista de usuarios con el aumento de sueldo
-		List<Usuario> user = calc.calcularSueldoUusario((usuario, incremento) -> new Usuario(usuario.getNombre(), usuario.getFechaNacimiento(), usuario.getSueldo(), usuario.getSueldo() * Double.valueOf("1." + incremento.intValue())), listaUsuarios, 30.0);
+		List<Usuario> user = calc.calcularSueldoUusario((usuario, incremento) -> new Usuario(usuario.getId(), usuario.getNombre(), usuario.getFechaNacimiento(), usuario.getSueldo(), usuario.getSueldo() * Double.valueOf("1." + incremento.intValue())), listaUsuarios, 30.0);
 		user.stream().forEach(u -> logger.debug("El usuario \u001b[36m {} \u001B[0m de \u001b[36m {} \u001B[0m años de edad con un sueldo de \u001b[36m {} \u001B[0m tuvo un aumento que equivale a: \u001b[36m {} \u001B[0m", 
 				u.getNombre(), u.getFechaNacimiento(), u.getSueldo(), u.getSueldoAumento()));
 		
