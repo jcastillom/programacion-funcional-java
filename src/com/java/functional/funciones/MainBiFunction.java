@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,17 +18,17 @@ public class MainBiFunction {
 	public static void main(String[] args) {
 		
 		/*
-		 * Interface funcional BiFunction que recibe dos parámetros (Object T, Object U) y devuelve uno (Object R)
+		 * Interface funcional BiFunction que recibe dos parï¿½metros (Object T, Object U) y devuelve uno (Object R)
 		 * Los argumentos pueden ser de diferentes tipos
 		 * Interface BiFunction(T t, U u, R r)
-		 * Tiene un método abstracto que recibe dos objetos apply(T t, U u)
+		 * Tiene un mï¿½todo abstracto que recibe dos objetos apply(T t, U u)
 		 */
 		BiFunction<String, String, String> bi = (x, y) -> x + y;
 		logger.debug("Se concatenan valores con BiFunction: {}", bi.apply("Bi-", "Function").length());
 
 
 		
-		//Ejemplo de BiFunctioncon un método de otra clase
+		//Ejemplo de BiFunctioncon un mï¿½todo de otra clase
 		ClaseBiFunction calc = new ClaseBiFunction();
 		String resultado = calc.calcular((x, y) -> ": " + x * y, 10, 60);
 		logger.debug("El resultado es{}", resultado);
@@ -44,7 +44,7 @@ public class MainBiFunction {
 		
 		//Devuelve una lista de usuarios con el aumento de sueldo
 		List<Usuario> user = calc.calcularSueldoUusario((usuario, incremento) -> new Usuario(usuario.getId(), usuario.getNombre(), usuario.getFechaNacimiento(), usuario.getSueldo(), usuario.getSueldo() * Double.valueOf("1." + incremento.intValue())), listaUsuarios, 30.0);
-		user.stream().forEach(u -> logger.debug("El usuario \u001b[36m {} \u001B[0m de \u001b[36m {} \u001B[0m años de edad con un sueldo de \u001b[36m {} \u001B[0m tuvo un aumento que equivale a: \u001b[36m {} \u001B[0m", 
+		user.stream().forEach(u -> logger.debug("El usuario \u001b[36m {} \u001B[0m de \u001b[36m {} \u001B[0m aï¿½os de edad con un sueldo de \u001b[36m {} \u001B[0m tuvo un aumento que equivale a: \u001b[36m {} \u001B[0m", 
 				u.getNombre(), u.getFechaNacimiento(), u.getSueldo(), u.getSueldoAumento()));
 		
 	}

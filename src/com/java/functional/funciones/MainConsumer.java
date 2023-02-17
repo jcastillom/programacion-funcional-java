@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.util.function.Consumer;
 
@@ -16,13 +16,13 @@ public class MainConsumer {
 		Logger logger = LoggerFactory.getLogger(MainConsumer.class);
 		
 		/**
-		 * Interface funcional Consumer que recibe un parámetro (Object T)
+		 * Interface funcional Consumer que recibe un parï¿½metro (Object T)
 		 * El argumento puede ser de cualquier tipo
 		 * Interface Consumer<T>
-		 * Su método abstracto recibe un objeto accept(T t)
+		 * Su mï¿½todo abstracto recibe un objeto accept(T t)
 		 */
-		Consumer<String> nombreUpper = nombre -> logger.debug("Nombre en mayúsculas: {}", nombre.toUpperCase());
-		nombreUpper.accept("José");
+		Consumer<String> nombreUpper = nombre -> logger.debug("Nombre en mayï¿½sculas: {}", nombre.toUpperCase());
+		nombreUpper.accept("Josï¿½");
 		
 		//Ejemplo de aumento de sueldo con Consumer
 		ClaseConsumer claseConsumer = new ClaseConsumer();

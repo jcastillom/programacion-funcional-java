@@ -14,7 +14,9 @@ import com.java.functional.beans.Usuario;
 
 public class Base {
 	
-	protected final Logger logger = LoggerFactory.getLogger(getClass());
+	protected static final Logger logger = LoggerFactory.getLogger(Base.class);
+	
+	protected static final String SEPARADOR = "----------------------------------------------------------------------"; 
 	
 	public static List<Usuario> listaUsuarios(){
 		return Arrays.asList(
@@ -28,7 +30,7 @@ public class Base {
 				new Usuario(71, "Ricardo", LocalDate.of(1990, 1, 29), 14000, 0),
 				new Usuario(89, "Beatriz", LocalDate.of(1990, 5, 7), 5000, 0),
 				new Usuario(67, "Paola", LocalDate.of(1990, 9, 6), 9000, 0),
-				new Usuario(11, "José", LocalDate.of(1986, 3, 12), 1000, 0)
+				new Usuario(11, "Josï¿½", LocalDate.of(1986, 3, 12), 1000, 0)
 			);
 	}
 	

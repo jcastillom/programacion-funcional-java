@@ -1,4 +1,4 @@
-package com.java.functional.service;
+package com.java.functional.lambdas;
 
 public interface LambdaParametros {
 	

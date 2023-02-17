@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -21,9 +21,9 @@ public class MainOrdenamiento {
 	
 	public static void main(String[] args) {
 		
-		List<String> listaNombres = Arrays.asList("José", "Chappie", "Joel", "Luis", "Esau", "Jose", "Mayra", "Alvaro");
+		List<String> listaNombres = Arrays.asList("Josï¿½", "Chappie", "Joel", "Luis", "Esau", "Jose", "Mayra", "Alvaro");
 		
-		List<Persona> listaPersonas = Arrays.asList(new Persona(2, "José"), new Persona(1, "Emilio"), new Persona(5, "Chappie"), new Persona(4, "Karen"), new Persona(3, "Roseno"));
+		List<Persona> listaPersonas = Arrays.asList(new Persona(2, "Josï¿½"), new Persona(1, "Emilio"), new Persona(5, "Chappie"), new Persona(4, "Karen"), new Persona(3, "Roseno"));
 		
 		//Ordenar listas 
 		logger.debug("Lista original de nombres: ");
@@ -69,7 +69,7 @@ public class MainOrdenamiento {
 				new Usuario(71, "Ricardo", LocalDate.of(1994, 1, 29), 14000, 0),
 				new Usuario(89, "Beatriz", LocalDate.of(1999, 5, 7), 5000, 0),
 				new Usuario(67, "Paola", LocalDate.of(1987, 9, 6), 9000, 0),
-				new Usuario(11, "José", LocalDate.of(1986, 3, 12), 1000, 0)
+				new Usuario(11, "Josï¿½", LocalDate.of(1986, 3, 12), 1000, 0)
 			);
 		
 		logger.debug(SEPARADOR);
@@ -83,9 +83,9 @@ public class MainOrdenamiento {
 		Collections.sort(listaUsuarios, new OrdenaUsuarioPorId());
 		logger.debug("\t{}", listaUsuarios);
 		
-		// Ordenar por algun parámetro específico sin hacer una clase extra, solo con una clase anónima
+		// Ordenar por algun parï¿½metro especï¿½fico sin hacer una clase extra, solo con una clase anï¿½nima
 		logger.debug(SEPARADOR);
-		logger.debug("Usuarios CON ordenamiento COMPARATOR y clase anónima: ");
+		logger.debug("Usuarios CON ordenamiento COMPARATOR y clase anï¿½nima: ");
 		Collections.sort(listaUsuarios, new Comparator<Usuario>() {
 			@Override
 			public int compare(Usuario user1, Usuario user2) {
@@ -94,15 +94,15 @@ public class MainOrdenamiento {
 		});
 		logger.debug("\t{}", listaUsuarios);
 		
-		// Ordenamiento COMPARATOR con expresión lambda
+		// Ordenamiento COMPARATOR con expresiï¿½n lambda
 		logger.debug(SEPARADOR);
-		logger.debug("Usuarios CON ordenamiento por ID COMPARATOR y expresión lambda: ");
+		logger.debug("Usuarios CON ordenamiento por ID COMPARATOR y expresiï¿½n lambda: ");
 		Collections.sort(listaUsuarios, (user1, user2) -> user1.getId() - user2.getId());
 		logger.debug("\t{}", listaUsuarios);
 		
-		// Ordenamiento COMPARATOR con expresión lambda ordenado por Fecha de nacimiento.
+		// Ordenamiento COMPARATOR con expresiï¿½n lambda ordenado por Fecha de nacimiento.
 		logger.debug(SEPARADOR);
-		logger.debug("Usuarios CON ordenamiento por Fecha de Nacimiento, COMPARATOR y expresión lambda: ");
+		logger.debug("Usuarios CON ordenamiento por Fecha de Nacimiento, COMPARATOR y expresiï¿½n lambda: ");
 //		Collections.sort(listaUsuarios, (user1, user2) -> user2.getFechaNacimiento().compareTo(user1.getFechaNacimiento())); // Ordenamiento usando compareTo
 		Collections.sort(listaUsuarios, Comparator.comparing(Usuario::getFechaNacimiento)); // Ordenamiento usando Comparator.comparing por fecha de nacimiento
 		logger.debug("\t{}", listaUsuarios);

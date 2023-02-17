@@ -1,13 +1,9 @@
-package com.java.functional.main;
+package com.java.functional.lambdas;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.java.functional.base.Base;
-import com.java.functional.service.LambdaCalculadoraInt;
-import com.java.functional.service.LambdaCalculadoraLong;
-import com.java.functional.service.LambdaParametros;
-import com.java.functional.service.LambdaSimple;
 
 public class Principal extends Base {
 	
@@ -17,11 +13,11 @@ public class Principal extends Base {
 		ejecutarLambdaSimple();
 		ejecutarLambdaConParametros();
 		
-		calcular((int a, int b) -> a * b);					// indicar el tipo de dato directo en los parámetros
+		calcular((int a, int b) -> a * b);					// indicar el tipo de dato directo en los parï¿½metros
 		
 		calcular((LambdaCalculadoraInt)(a, b) -> a / b);	// Hacer Casteo del objeto al que pertenece la expresipon infiere el tipo de dato
 		
-		LambdaCalculadoraInt calInt = (a, b) -> a + b;		// Crear la expresión Lamda con la interface requerida e infiere el tipo de dato
+		LambdaCalculadoraInt calInt = (a, b) -> a + b;		// Crear la expresiï¿½n Lamda con la interface requerida e infiere el tipo de dato
 		calcular(calInt);
 		
 		LambdaCalculadoraLong calLong = ( a, b) -> a - b;

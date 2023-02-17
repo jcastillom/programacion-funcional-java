@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -18,16 +18,16 @@ public class MainFunction {
 	public static void main(String[] args) {
 		
 		/*
-		 * Interfaz funcional Function que recibe un parámetro (Object T) y devuelve un parámetro (Object R)
+		 * Interfaz funcional Function que recibe un parï¿½metro (Object T) y devuelve un parï¿½metro (Object R)
 		 * Los argumentos pueden ser de diferentes tipos
 		 * Interface Function<T, R>
-		 * Tiene un método abstracto que recibe un objeto apply(T t)
+		 * Tiene un mï¿½todo abstracto que recibe un objeto apply(T t)
 		 */
 		Function<Integer, String> convertidor = x -> Integer.toString(x);
 		logger.debug("{}", convertidor.apply(543274).length());
 		
 		//Ejemplo de Function con un bean
-		Usuario usuario = new Usuario(1, "José", LocalDate.of(1987, 3, 12), 2750.3, 0);
+		Usuario usuario = new Usuario(1, "Josï¿½", LocalDate.of(1987, 3, 12), 2750.3, 0);
 		String nombre = (String ) obtenerDatosUsuario(usuario, Usuario::getNombre);
 		int edad = (int) obtenerDatosUsuario(usuario, Usuario::getFechaNacimiento);
 		float sueldo = (float) obtenerDatosUsuario(usuario, Usuario::getSueldo);

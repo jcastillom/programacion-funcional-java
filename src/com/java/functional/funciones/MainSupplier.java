@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.util.function.Supplier;
 

@@ -1,4 +1,4 @@
-package com.java.functional.main;
+package com.java.functional.funciones;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -24,7 +24,7 @@ public class MainPredicate {
 		 * Interfaz funcional Predicate que recibe un parÃ¡metro (Object T) y devuelve un booleano
 		 * El argumento puede ser de difente tipo
 		 * Interfaz Predicate<T>
-		 * Tiene un método bstracto que recibe un objeto test(T)
+		 * Tiene un mï¿½todo bstracto que recibe un objeto test(T)
 		 */
 		// Tambien se puede utilizar como: Predicate<Integer>
 		IntPredicate pred = valor -> valor > 0;
@@ -48,7 +48,7 @@ public class MainPredicate {
 		//Obtener los usuarios mayores de edad con Predicate, filter, map y Period
 		List<String> listaUsuariosMayores = Base.listaUsuarios().stream()
 				.filter(usuario -> obtenerEdad(usuario.getFechaNacimiento()) > 34)
-				.map(usuario -> usuario.getNombre() + " tiene " + obtenerEdad(usuario.getFechaNacimiento()) + " años")
+				.map(usuario -> usuario.getNombre() + " tiene " + obtenerEdad(usuario.getFechaNacimiento()) + " aï¿½os")
 				.collect(Collectors.toList());
 		logger.debug("-------------------------------------");
 		listaUsuariosMayores.forEach(logger::debug);
